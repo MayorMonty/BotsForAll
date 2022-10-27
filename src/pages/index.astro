@@ -4,6 +4,13 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Robotics Is For Everyone">
+  <nav
+    class="fixed top-0 left-0 z-10 w-screen h-16 navbar bg-white flex items-center justify-between px-6 shadow-lg"
+  >
+    <h1 class="text-lg font-bold">
+      Robotics Is For <span class="text-gradient">Everyone</span>
+    </h1>
+  </nav>
   <header class="h-[90vh] sm:h-[70vh] w-full p-6">
     <section class="container mx-auto h-full flex flex-col justify-end">
       <h1 class="text-6xl text-white font-black mt-8">
@@ -19,13 +26,17 @@ import Card from "../components/Card.astro";
         role="list"
         class="flex gap-4 flex-col mt-8 mb-16 sm:mb-12 md:mb-8 sm:flex-row"
       >
-        <Card href="#students" title="For Students" />
-        <Card href="#parents" title="For Parents" />
-        <Card href="#educators" title="For Educators" />
+        <Card href="#students" title="For Students" class="py-4 px-5 text-lg" />
+        <Card href="#parents" title="For Parents" class="py-4 px-5 text-lg" />
+        <Card
+          href="#educators"
+          title="For Educators"
+          class="py-4 px-5 text-lg"
+        />
       </ul>
     </section>
   </header>
-  <main class="container mx-auto">
+  <main class="container mx-auto h-[200vh]">
     <h1 class="text-xl font-extrabold"># For Students</h1>
   </main>
 </Layout>
