@@ -1,81 +1,76 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Robotics Is For Everyone">
+  <header class="h-[90vh] sm:h-[70vh] w-full p-6">
+    <section class="container mx-auto h-full flex flex-col justify-end">
+      <h1 class="text-6xl text-white font-black mt-8">
+        Robotics Is For<span class="text-gradient"> Everyone</span>
+      </h1>
+      <p class="text-lg text-white mt-4 max-w-2xl">
+        Increasing numbers of schools and comunity organizations are creating
+        competitive robotics teams! This can be a truly life-changing way to
+        experience real-world STEM concepts. Find out if there's a team near
+        you!
+      </p>
+      <ul
+        role="list"
+        class="flex gap-4 flex-col mt-8 mb-16 sm:mb-12 md:mb-8 sm:flex-row"
+      >
+        <Card href="#students" title="For Students" />
+        <Card href="#parents" title="For Parents" />
+        <Card href="#educators" title="For Educators" />
+      </ul>
+    </section>
+  </header>
+  <main class="container mx-auto">
+    <h1 class="text-xl font-extrabold"># For Students</h1>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+
+  header {
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    background: linear-gradient(
+        rgba(var(--accent), 60%),
+        rgba(0, 0, 0, 70%),
+        rgba(0, 0, 0, 70%)
+      ),
+      url(/header.jpeg);
+    background-size: cover;
+    background-position: 0% 20%;
+  }
 </style>
