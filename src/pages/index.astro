@@ -5,7 +5,7 @@ import Card from "../components/Card.astro";
 
 <Layout title="Robotics Is For Everyone">
   <nav
-    class="fixed top-0 left-0 z-10 w-screen h-16 navbar bg-white flex items-center justify-between px-6 shadow-lg"
+    class="fixed top-0 left-0 z-10 w-screen h-16 navbar bg-white hidden items-center justify-between px-6 shadow-lg"
   >
     <h1 class="text-lg font-bold">
       Robotics Is For <span class="text-gradient">Everyone</span>
@@ -36,8 +36,128 @@ import Card from "../components/Card.astro";
       </ul>
     </section>
   </header>
-  <main class="container mx-auto h-[200vh]">
-    <h1 class="text-xl font-extrabold"># For Students</h1>
+  <section class="social py-8">
+    <section class="container mx-auto flex flex-col md:flex-row gap-4">
+      <img
+        src="/images/BecomeAWorldChampion.jpg"
+        class="rounded-md lg:w-1/2"
+        alt="Become a World Champion"
+      />
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae modi
+          cupiditate voluptatum ad assumenda dicta recusandae quam facilis
+          voluptate quos, vel necessitatibus quibusdam numquam perferendis
+          cumque reiciendis exercitationem, deserunt ea.
+        </p>
+      </section>
+    </section>
+  </section>
+  <main class="container mx-auto">
+    <section class="mt-8 mb-8" id="students">
+      <div
+        class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
+      >
+        <h1 class="text-xl font-extrabold text-white">For Students</h1>
+      </div>
+      <p>Showcase your STEM Skills on the World Stage!</p>
+    </section>
+    <hr />
+    <section class="mt-8 mb-8" id="parents">
+      <div
+        class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
+      >
+        <h1 class="text-xl font-extrabold text-white">For Parents</h1>
+      </div>
+      <p class="mt-4">
+        If your child just joined a robotics program, it's time to get excited!
+        These student robotics teams are composed of like-minded students
+        working together to design, build, program, and drive a competition
+        robot. Like athletics and other school activities, competitive robotics
+        can give your student real-world experience in communication, teamwork,
+        leadership, conflict resolution, and time management. But competitive
+        robotics provides students with hands on experience with important
+        college- and career-ready skills such as mathematics, physics, computer
+        science, technical writing, business management, and more. Studies show <a
+          href="#footnotes-talan">[1]</a
+        > that participation in educational robotics programs leads to better educational
+        outcomes, and increased interest and proficency in important technology skills.
+        The competitive aspect of these programs imbues many students with a helpful
+        level of structure and internal motivation to develop these skills independent
+        of their coursework.
+      </p>
+      <p class="mt-4">
+        Most teams are affiliated with a school, nonprofit organization, or
+        after school program. Students typically meet several times per week
+        with their team mates to develop and test their approach to the design
+        challenge. Teams showcase their skills at robotics competitions, which
+        usually occur on weekends. These competitions are an exciting showcase
+        of everything they have accomplished so far!
+      </p>
+      <p class="mt-4">
+        Parents and adults serve key roles in these programs, because all
+        student teams need some level of behind the scenes support. This support
+        includes finding resources for the team, helping them plan out their
+        season schedule, and fundraising. Many successful teams often look to
+        their adult coaches and mentors for technical advice. You as a parent
+        can serve a key role in connecting your child's team with industry
+        experts and experienced teams in your local area.
+      </p>
+      <p class="mt-4">
+        The structure of a competitive robotics season is often vary similar to
+        that of other student competitions. The most common competition
+        programs, such as the <a href="https://firstinspires.org"
+          >First Robotics Competition</a
+        > or the <a href="https://roboticseducation.org"
+          >VEX Robotics Competition</a
+        >, have seasons that last for a portion of year. Each year, these
+        organizations release a new design challenge to students around the
+        world. Teams will develop their designs, build, prototype, and then
+        bring their robot to a local competition.
+      </p>
+      <p class="mt-4">
+        At their local regional event, teams will play in matches against other
+        teams in the area, ultimately culminating in an elimination bracket to
+        determine the event's tournament champion. While at events, students
+        typically interview with judges to evaluate their teams performance in
+        documentation, soft-skills, and cohesion.
+      </p>
+      <p class="mt-4">
+        Teams that win certain awards at these events will qualify in their
+        State or Regional Championship, which brings together some of the most
+        advanced teams from across their region. A regional championship is
+        usually structured exactly the same as a local competition, with
+        competition matches for the team culminating in an elimination
+        tournament.
+      </p>
+      <p class="mt-4">
+        Teams that do exceptionally well at their Regional Championship will be
+        invited to compete at the World Championship, which brings together some
+        of the best teams from across the world to determine the World Champion.
+        Typically these larger events require fundraising and occur over
+        multiple days.
+      </p>
+    </section>
+    <hr />
+    <section class="mt-8 mb-8" id="educators">
+      <div
+        class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
+      >
+        <h1 class="text-xl font-extrabold text-white">For Educators</h1>
+      </div>
+      <p>Showcase your STEM Skills on the World Stage!</p>
+    </section>
+    <footer id="footnotes">
+      <h1 class="text-xl font-extrabold"># References</h1>
+      <p id="footnotes-talan">
+        [1]: <em
+          >Talan, T. (2021). The effect of educational robotic applications on
+          academic achievement: A meta-analysis study. International Journal of
+          Technology in Education and Science (IJTES), 5(4), 512-526.
+          https://doi.org/10.46328/ijtes.242</em
+        >
+      </p>
+    </footer>
   </main>
 </Layout>
 
@@ -83,5 +203,12 @@ import Card from "../components/Card.astro";
       url(/header.jpeg);
     background-size: cover;
     background-position: 0% 20%;
+  }
+
+  a {
+    text-decoration: underline;
+    color: rgb(var(--accent));
+  }
+  .social {
   }
 </style>
