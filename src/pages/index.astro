@@ -1,4 +1,6 @@
 ---
+import images from "../data/images.json";
+
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
@@ -36,128 +38,282 @@ import Card from "../components/Card.astro";
       </ul>
     </section>
   </header>
-  <section class="social py-8">
-    <section class="container mx-auto flex flex-col md:flex-row gap-4">
-      <img
-        src="/images/BecomeAWorldChampion.jpg"
-        class="rounded-md lg:w-1/2"
-        alt="Become a World Champion"
-      />
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae modi
-          cupiditate voluptatum ad assumenda dicta recusandae quam facilis
-          voluptate quos, vel necessitatibus quibusdam numquam perferendis
-          cumque reiciendis exercitationem, deserunt ea.
+  <main class="container mx-auto">
+    <section id="introduction" class="my-8">
+      <h1 class="text-xl font-extrabold">Introduction</h1>
+      Increasing numbers of schools have competitive robotics programs. There is
+      likely a team near you! But of course, like athletics, competitive robotics
+      is a broad tent with many competitions, usually run by a nonprofit organization.
+      But the core of competitive robotics at the student level is relatively standard
+      across competitions. Read about some of the common programs that might have
+      teams near you:
+
+      <section class="my-4">
+        <p class="mt-4">
+          The <strong>First Robotics Competition (FRC)</strong>, organized by
+          <a href="https://firstinspires.org">FIRST</a> was the first major competitive
+          robotics program designed for High School age students. FIRST organizers
+          call FIRST the ultimate sport of the mind, and the "hardest fun you'll
+          ever have." FIRST can be a very rewarding program to get into, but oftentimes
+          requires significant school, mentor, and resource investment. If your school
+          has an existing mechatronics, CATE, or PLTW program, adding an FRC team
+          can really take your program to the next level! An FRC team is usually
+          composed of 10 or more students. <a
+            href="https://www.firstinspires.org/team-event-search#type=teams&sort=name&programs=FRC&year=2022"
+            >Find an FRC team near you!</a
+          >
         </p>
+
+        <ul class="my-4">
+          <li><em>Typical Team Cost Per Year: $20,000</em></li>
+          <li><em>Students Per Team: 10-50</em></li>
+          <li>
+            <em
+              >Emphasis: Mechanical Design, Custom Manufacturing, Advanced
+              Software, Electronics</em
+            >
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="my-4">
+        <p class="mt-4">
+          The <strong>First Tech Challenge (FTC)</strong>, is another program
+          designed for High School students, with an emphasis on being easier to
+          start and run. In FTC, teams construct smaller robots than in FRC,
+          with smaller teams. An emphasis is placed on 3D printing and
+          programming. Larger programs often have many FTC teams in a single
+          school. <a
+            class="mt-4"
+            href="https://www.firstinspires.org/team-event-search#type=teams&sort=name&programs=FTC&year=2022"
+            >Find an FTC team near you!</a
+          >
+        </p>
+        <ul class="my-4">
+          <li><em>Typical Team Cost Per Year: $6000</em></li>
+          <li><em>Students Per Team: 4-6</em></li>
+          <li>
+            <em>Emphasis: Mechanical Design, 3D Printing, Advanced Software</em>
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section class="my-4">
+        <p class="mt-4">
+          The <strong>VEX Robotics Competition (VRC)</strong> is the largest competitive
+          robotics program in the world, centered around the VEX Robotics system
+          of parts. VRC students can compete both at the Middle School and High School
+          level, typically building from a kit of parts. A huge focus of VRC is allowing
+          students to go to as many competitions as possible. In FTC, a team may
+          go to one regional competition and one championship. In VRC, teams will
+          often go to 4 or more qualifying tournaments, a state/regional championship,
+          and possibly the world championship.
+          <a class="mt-4" href="https://www.robotevents.com/map"
+            >Find an VRC team near you!</a
+          >
+        </p>
+        <ul class="my-4">
+          <li><em>Typical Team Cost Per Year: $7000</em></li>
+          <li><em>Students Per Team: 5-7</em></li>
+          <li>
+            <em
+              >Emphasis: Mechanical Design, Software, Engineering Design Process</em
+            >
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div
+          class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
+        >
+          <h1 class="text-xl font-extrabold text-white">
+            Robotics Is For Everyone
+          </h1>
+        </div>
+        <p>
+          The <em>Robotics Is For Everyone</em> social media campaign seeks to educate
+          everyone about how fun, exciting, and positive competing in robotics can
+          be! Use the hashtag #BotsForAll with one of the images below to join the
+          movement!
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+          {
+            Object.values(images).map((r) => (
+              <a href={r.source} target="_blank">
+                <img src={r.source} alt={r.title} />
+              </a>
+            ))
+          }
+        </div>
+      </section>
+      <section class="my-8" id="students">
+        <div
+          class="intro mb-4 flex justify-between items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
+        >
+          <h1 class="text-xl font-extrabold text-white">For Students</h1>
+        </div>
+        <p class="mt-4">
+          Comeptitive Robotics is one of the most exciting and rewarding
+          activites you can do as a young person! The most popular programs, FRC
+          and VRC, are the hardest fun you'll ever have, and will push you to
+          achieve things you never thought possible.
+        </p>
+        <p class="mt-4">
+          The most important part of starting or joining a team is the team
+          itself. Competing with a robot requires a lot of skills: design,
+          manufacturing, programming, driving, strategic analysis, and more. You
+          are not likely to have all of these skills, so relying on your team
+          for training and support can be essential.
+        </p>
+        <p class="mt-4">
+          Most regions have an online community for teams in that specific
+          region designed to connect teams together. This can be on discord, a
+          forum, slack, or something else! Ask around your local teams to see if
+          there a community for your region. These can be excellent resources
+          for connecting you to likeminded students in the area, organization
+          scrimmages, and work through problems together.
+        </p>
+        <hr />
+        <section class="my-8" id="parents">
+          <div
+            class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
+          >
+            <h1 class="text-xl font-extrabold text-white">For Parents</h1>
+          </div>
+          <p class="mt-4">
+            If your child just joined a robotics program, it's time to get
+            excited! These student robotics teams are composed of like-minded
+            students working together to design, build, program, and drive a
+            competition robot. Like athletics and other school activities,
+            competitive robotics can give your student real-world experience in
+            communication, teamwork, leadership, conflict resolution, and time
+            management. But competitive robotics provides students with hands on
+            experience with important college- and career-ready skills such as
+            mathematics, physics, computer science, technical writing, business
+            management, and more. Studies show <a href="#footnotes-talan">[1]</a
+            > that participation in educational robotics programs leads to better
+            educational outcomes, and increased interest and proficency in important
+            technology skills. The competitive aspect of these programs imbues many
+            students with a helpful level of structure and internal motivation to
+            develop these skills independent of their coursework.
+          </p>
+          <p class="mt-4">
+            Most teams are affiliated with a school, nonprofit organization, or
+            after school program. Students typically meet several times per week
+            with their team mates to develop and test their approach to the
+            design challenge. Teams showcase their skills at robotics
+            competitions, which usually occur on weekends. These competitions
+            are an exciting showcase of everything they have accomplished so
+            far!
+          </p>
+          <p class="mt-4">
+            Parents and adults serve key roles in these programs, because all
+            student teams need some level of behind the scenes support. This
+            support includes finding resources for the team, helping them plan
+            out their season schedule, and fundraising. Many successful teams
+            often look to their adult coaches and mentors for technical advice.
+            You as a parent can serve a key role in connecting your child's team
+            with industry experts and experienced teams in your local area.
+          </p>
+          <p class="mt-4">
+            The structure of a competitive robotics season is often vary similar
+            to that of other student competitions. The most common competition
+            programs, such as the <a href="https://firstinspires.org"
+              >First Robotics Competition</a
+            > or the <a href="https://roboticseducation.org"
+              >VEX Robotics Competition</a
+            >, have seasons that last for a portion of year. Each year, these
+            organizations release a new design challenge to students around the
+            world. Teams will develop their designs, build, prototype, and then
+            bring their robot to a local competition.
+          </p>
+          <p class="mt-4">
+            At their local regional event, teams will play in matches against
+            other teams in the area, ultimately culminating in an elimination
+            bracket to determine the event's tournament champion. While at
+            events, students typically interview with judges to evaluate their
+            teams performance in documentation, soft-skills, and cohesion.
+          </p>
+          <p class="mt-4">
+            Teams that win certain awards at these events will qualify in their
+            State or Regional Championship, which brings together some of the
+            most advanced teams from across their region. A regional
+            championship is usually structured exactly the same as a local
+            competition, with competition matches for the team culminating in an
+            elimination tournament.
+          </p>
+          <p class="mt-4">
+            Teams that do exceptionally well at their Regional Championship will
+            be invited to compete at the World Championship, which brings
+            together some of the best teams from across the world to determine
+            the World Champion. Typically these larger events require
+            fundraising and occur over multiple days.
+          </p>
+
+          <hr />
+          <section class="my-8" id="educators">
+            <div
+              class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
+            >
+              <h1 class="text-xl font-extrabold text-white">For Educators</h1>
+            </div>
+            Starting a competitive robotics program at your school or organization
+            can be an exciting but scary prospect! In most schools, competitive robotics
+            is an after school activity, like athletics or marching band. A properly
+            developed competitive robotics program at your school can have a massive
+            impact on your students. These programs provide an alternate entrance
+            into STEM learning which work especially well on students who might not
+            traditionally succeed in the classroom.
+
+            <p class="mt-4">
+              Schools that have existing mechatronics, CATE, or PLTW programs
+              will likely be able to easily augment these programs to
+              competetitive robotics programs. The exact cost of a competitive
+              robotics program for your school can vary based on which program
+              you compete in, how many students you serve, and any materials you
+              may already have.
+            </p>
+            <p class="mt-4">
+              Usually, the program you participate in has resources to help with
+              fundraising. The nonprofits that run competitions often times have
+              grants provided to teams. <a
+                href="https://roboticseducation.org/grants/"
+                >Check out grants available to start a team here.</a
+              >
+              In many comeptitive programs, the <em>Event Partners</em> (people and
+              organizations who run the tournaments) are usually either schools or
+              nonprofits. As your team grows and develops, hosting your own competitions
+              as fundraisers can be a fantastic way to give back to your local region,
+              give your students more chances to compete, and raise money to cover
+              some of the expenses for your team.
+            </p>
+            <p class="mt-4">
+              Another aspect that can be scary to lots of educators just
+              starting out is ensuring that your teams have the correct level of
+              technical and organizational mentorship. This is where
+              pre-existing teams in your region can be the most helpful. If you
+              are in a larger school district, there are likely multiple
+              competitive teams across the district willing and able to help you
+              get started! If you are starting an independent or non-school
+              affiliated team, try reaching out to other independent teams in
+              your area! Local teams will best be able to provide you with
+              resources for starting out in your area.
+            </p>
+          </section>
+          <footer id="footnotes">
+            <h1 class="text-xl font-extrabold">References</h1>
+            <p id="footnotes-talan">
+              [1]: <em
+                >Talan, T. (2021). The effect of educational robotic
+                applications on academic achievement: A meta-analysis study.
+                International Journal of Technology in Education and Science
+                (IJTES), 5(4), 512-526. https://doi.org/10.46328/ijtes.242</em
+              >
+            </p>
+          </footer>
+        </section>
       </section>
     </section>
-  </section>
-  <main class="container mx-auto">
-    <section class="mt-8 mb-8" id="students">
-      <div
-        class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
-      >
-        <h1 class="text-xl font-extrabold text-white">For Students</h1>
-      </div>
-      <p>Showcase your STEM Skills on the World Stage!</p>
-    </section>
-    <hr />
-    <section class="mt-8 mb-8" id="parents">
-      <div
-        class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
-      >
-        <h1 class="text-xl font-extrabold text-white">For Parents</h1>
-      </div>
-      <p class="mt-4">
-        If your child just joined a robotics program, it's time to get excited!
-        These student robotics teams are composed of like-minded students
-        working together to design, build, program, and drive a competition
-        robot. Like athletics and other school activities, competitive robotics
-        can give your student real-world experience in communication, teamwork,
-        leadership, conflict resolution, and time management. But competitive
-        robotics provides students with hands on experience with important
-        college- and career-ready skills such as mathematics, physics, computer
-        science, technical writing, business management, and more. Studies show <a
-          href="#footnotes-talan">[1]</a
-        > that participation in educational robotics programs leads to better educational
-        outcomes, and increased interest and proficency in important technology skills.
-        The competitive aspect of these programs imbues many students with a helpful
-        level of structure and internal motivation to develop these skills independent
-        of their coursework.
-      </p>
-      <p class="mt-4">
-        Most teams are affiliated with a school, nonprofit organization, or
-        after school program. Students typically meet several times per week
-        with their team mates to develop and test their approach to the design
-        challenge. Teams showcase their skills at robotics competitions, which
-        usually occur on weekends. These competitions are an exciting showcase
-        of everything they have accomplished so far!
-      </p>
-      <p class="mt-4">
-        Parents and adults serve key roles in these programs, because all
-        student teams need some level of behind the scenes support. This support
-        includes finding resources for the team, helping them plan out their
-        season schedule, and fundraising. Many successful teams often look to
-        their adult coaches and mentors for technical advice. You as a parent
-        can serve a key role in connecting your child's team with industry
-        experts and experienced teams in your local area.
-      </p>
-      <p class="mt-4">
-        The structure of a competitive robotics season is often vary similar to
-        that of other student competitions. The most common competition
-        programs, such as the <a href="https://firstinspires.org"
-          >First Robotics Competition</a
-        > or the <a href="https://roboticseducation.org"
-          >VEX Robotics Competition</a
-        >, have seasons that last for a portion of year. Each year, these
-        organizations release a new design challenge to students around the
-        world. Teams will develop their designs, build, prototype, and then
-        bring their robot to a local competition.
-      </p>
-      <p class="mt-4">
-        At their local regional event, teams will play in matches against other
-        teams in the area, ultimately culminating in an elimination bracket to
-        determine the event's tournament champion. While at events, students
-        typically interview with judges to evaluate their teams performance in
-        documentation, soft-skills, and cohesion.
-      </p>
-      <p class="mt-4">
-        Teams that win certain awards at these events will qualify in their
-        State or Regional Championship, which brings together some of the most
-        advanced teams from across their region. A regional championship is
-        usually structured exactly the same as a local competition, with
-        competition matches for the team culminating in an elimination
-        tournament.
-      </p>
-      <p class="mt-4">
-        Teams that do exceptionally well at their Regional Championship will be
-        invited to compete at the World Championship, which brings together some
-        of the best teams from across the world to determine the World Champion.
-        Typically these larger events require fundraising and occur over
-        multiple days.
-      </p>
-    </section>
-    <hr />
-    <section class="mt-8 mb-8" id="educators">
-      <div
-        class="intro mb-4 flex items-center pl-4 first-letter h-16 bg-gradient-to-r gradient from-[rgb(var(--accent))] to-transparent rounded-md"
-      >
-        <h1 class="text-xl font-extrabold text-white">For Educators</h1>
-      </div>
-      <p>Showcase your STEM Skills on the World Stage!</p>
-    </section>
-    <footer id="footnotes">
-      <h1 class="text-xl font-extrabold"># References</h1>
-      <p id="footnotes-talan">
-        [1]: <em
-          >Talan, T. (2021). The effect of educational robotic applications on
-          academic achievement: A meta-analysis study. International Journal of
-          Technology in Education and Science (IJTES), 5(4), 512-526.
-          https://doi.org/10.46328/ijtes.242</em
-        >
-      </p>
-    </footer>
   </main>
 </Layout>
 
