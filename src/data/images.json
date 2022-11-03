@@ -2,56 +2,56 @@
   "BecomeAWorldChampion": {
     "id": "BecomeAWorldChampion",
     "title": "Become A World Champion",
-    "source": "/images/BecomeAWorldChampion.jpg"
+    "source": "images/BecomeAWorldChampion.jpg"
   },
   "BePartOfALifelongCommunity": {
     "id": "BePartOfALifelongCommunity",
     "title": "BePart Of A Lifelong Community",
-    "source": "/images/BePartOfALifelongCommunity.jpg"
+    "source": "images/BePartOfALifelongCommunity.jpg"
   },
   "FindYourBestFriend": {
     "id": "FindYourBestFriend",
     "title": "Find Your Best Friend",
-    "source": "/images/FindYourBestFriend.jpg"
+    "source": "images/FindYourBestFriend.jpg"
   },
   "LeaveYourMark": {
     "id": "LeaveYourMark",
     "title": "Leave Your Mark",
-    "source": "/images/LeaveYourMark.jpg"
+    "source": "images/LeaveYourMark.jpg"
   },
   "MoreThanACompetition": {
     "id": "MoreThanACompetition",
     "title": "More Than A Competition",
-    "source": "/images/MoreThanACompetition.jpg"
+    "source": "images/MoreThanACompetition.jpg"
   },
   "RoboticsIsForEveryone": {
     "id": "RoboticsIsForEveryone",
     "title": "Robotics is For Everyone",
-    "source": "/images/RoboticsIsForEveryone.jpg"
+    "source": "images/RoboticsIsForEveryone.jpg"
   },
   "SolveGlobalProblems": {
     "id": "SolveGlobalProblems",
     "title": "Solve Global Problems",
-    "source": "/images/SolveGlobalProblems.jpg"
+    "source": "images/SolveGlobalProblems.jpg"
   },
   "STEMOnTheGlobalStage": {
     "id": "STEMOnTheGlobalStage",
     "title": "STEM On The World Stage",
-    "source": "/images/STEMOnTheGlobalStage.jpg"
+    "source": "images/STEMOnTheGlobalStage.jpg"
   },
   "Unforgettable": {
     "id": "Unforgettable",
     "title": "An Unforgettable Experience",
-    "source": "/images/Unforgettable.jpg"
+    "source": "images/Unforgettable.jpg"
   },
   "WorldComesTogether": {
     "id": "WorldComesTogether",
     "title": "Impact Millions of Students",
-    "source": "/images/WorldComesTogether.jpg"
+    "source": "images/WorldComesTogether.jpg"
   },
   "WorldWideCommunity": {
     "id": "WorldWideCommunity",
     "title": "Be Part of a Worldwide Community",
-    "source": "/images/WorldWideCommunity.jpg"
+    "source": "images/WorldWideCommunity.jpg"
   }
 }
